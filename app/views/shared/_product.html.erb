@@ -1,0 +1,6 @@
+<%= link_to product_path(product.id), class: 'product', 'data-turbo-frame': '_top' do  %> <!-- Con 'data-turbo-fram'... hacemos que se salga del frame y no haya ningun bug --> 
+    <br>
+    <%= image_tag product.photo, width: 200 if product.photo.attached? %> <!-- Con if product.photo.attached? comprobamos si tiene una foto adjunta -->
+    <h2><%= product.title %></h2>
+    <span><%= product.price %>$</span>
+<% end %>

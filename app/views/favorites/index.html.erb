@@ -1,0 +1,3 @@
+<h1><%= t('.title') %></h1>
+
+<%= turbo_frame_tag :products, src: products_path(favorites: true) %> <!-- Hacemos referencia al turbo_frame_tag de nombre :products que esta en el index de products -->

@@ -1,0 +1,104 @@
+en:
+  app_name: 'SellIT'
+  meta_title: 'Buy and sell second hand products!'
+
+  activerecord: # Para modificar los campos del formulario
+    models:
+      product: Product
+      category: Category
+      user: User
+    attributes:
+      product:
+        title: 'Title'
+        description: 'Description'
+        price: 'Price'
+        category: 'Category'
+        photo: 'Photo'
+      category:
+        name: 'Nombre'
+      user:
+        email: 'Email'
+        username: 'Username'
+        password: 'Password'
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: 'can"t be blank'
+            description:
+              blank: 'can"t be blank'
+            price:
+              blank: 'can"t be blank'
+            category:
+              blank: 'can"t be blank'
+
+  common:
+    confirm: 'Are you sure?'
+    back: 'Go back'
+    not_authorized: 'You dont have permission for this action'
+    not_found: 'Not found'
+  not_logged_in: 'You have to login or create an account'
+  shared:
+    header:
+      add: 'Add Product'
+      favorite: 'My favorites'
+      categories: 'Categories'
+      login: 'Login'
+      register: 'Register'
+      logout: 'Logout'
+
+  authentication:
+    users:
+      create:
+        created: 'Your account has been created'
+    sessions:
+      create:
+        created: 'Welcome!'
+        failed: 'Invalid login'
+      destroy:
+        destroyed: 'Session ended. Bye!'
+  products:
+    edit:
+      title: 'Edit Product'
+    new:
+      title: 'Add Product'
+    index:
+      title: 'Products'
+      all: 'All'
+      query_text: 'What do you want to search?'
+      min_price: 'Min price'
+      max_price: 'Max price'
+      newest: 'Newest'
+      expensive: 'Expensive'
+      cheapest: 'Cheapest'
+    show:
+      view_more_products: 'View more products by %{username}'
+    create:
+      created: 'Your product has been succesfully created'
+    update:
+      updated: 'Your product has been succesfully updated'
+    destroy:
+      destroyed: 'Your product has been succesfully deleted'
+
+  categories:
+    category:
+      edit: 'Edit'
+      delete: 'Delete'
+    index:
+      title: 'Categories'
+      new: 'Add Category'
+    edit:
+      title: 'Edit Category'
+    new:
+      title: 'New Category'
+    create:
+      created: 'Your category has been succesfully created'
+    update:
+      updated: 'Your category has been succesfully updated'
+    destroy:
+      destroyed: 'Your category has been succesfully deleted'
+
+  favorites:
+    index:
+      title: 'My Favorites'

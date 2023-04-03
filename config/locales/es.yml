@@ -1,0 +1,104 @@
+es:
+  app_name: 'Vendeloooooooooo'
+  meta_title: 'Compra y vende productos de segunda mano!'
+
+  activerecord: # Para modificar los campos del formulario
+    models:
+      product: Producto
+      category: Categoria
+      user: Usuario
+    attributes:
+      product:
+        title: 'Titulo'
+        description: 'Descripcion'
+        price: 'Precio'
+        category: 'Categoria'
+        photo: 'Foto'
+      category:
+        name: 'Nombre'
+      user:
+        email: 'Email'
+        username: 'Usuario'
+        password: 'Contraseña'
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: 'no puede estar vacio'
+            description:
+              blank: 'no puede estar vacia'
+            price:
+              blank: 'no puede estar vacio'
+            category:
+              blank: 'no puede estar vacio'
+
+  common:
+    confirm: 'Estas seguro?'
+    back: 'Volver atras'
+    not_authorized: 'No tienes permisos para esta accion'
+    common: 'No se ha encontrado'
+  not_logged_in: 'Tienes que hacer login o crear una cuenta'
+  shared:
+    header:
+      add: 'Anhadir Producto'
+      favorite: 'Mis favoritos'
+      categories: 'Categorias'
+      login: 'Login'
+      register: 'Registro'
+      logout: 'Cerrar Sesion'
+
+  authentication:
+    users:
+      create:
+        created: 'Tu cuenta se ha creado'
+    sessions:
+      create:
+        created: 'Bienvenido!'
+        failed: 'Login invalido'
+      destroy:
+        destroyed: 'Sesion finalizada. Adios!'
+  products:
+    edit:
+      title: 'Editar Producto'
+    new:
+      title: 'Anhadir Producto'
+    index:
+      title: 'Productos'
+      all: 'Todos'
+      query_text: 'Que quieres buscar?'
+      min_price: 'Precio minimo'
+      max_price: 'Precio maximo'
+      newest: 'Recientes'
+      expensive: 'Mas caros'
+      cheapest: 'Mas baratos'
+    show:
+      view_more_products: 'Ver mas productos de %{username}'
+    create:
+      created: 'Tu producto se ha creado correctamente'
+    update:
+      updated: 'Tu producto se ha actualizado correctamente'
+    destroy:
+      destroyed: 'Tu producto se ha eliminado correctamente'
+
+  categories:
+    category:
+      edit: 'Editar'
+      delete: 'Eliminar'
+    index:
+      title: 'Categorias'
+      new: 'Anhadir Categoria'
+    edit:
+      title: 'Editar Categoria'
+    new:
+      title: 'Nueva Categoria'
+    create:
+      created: 'Tu categoria se ha creado correctamente'
+    update:
+      updated: 'Tu categoria se ha actualizado correctamente'
+    destroy:
+      destroyed: 'Tu categoria se ha eliminado correctamente'
+      
+  favorites:
+    index:
+      title: 'Mis Favoritos'

@@ -1,0 +1,6 @@
+<%= @user.username %>
+
+<%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %> <!-- CUIDADO: hay que usar las comillas dobles -->
+        <%= render partial: 'shared/product', collection: @products %> <!-- En el partial ponemos lo que habia dentro del bucle, y esto ya genera el bucle automaticamente con collection -->
+        <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %> <!-- Hacemos la paginacion infinita. Con el if, nos evitamos la ultima peticion a una pagina que no existe -->
+<% end %>
