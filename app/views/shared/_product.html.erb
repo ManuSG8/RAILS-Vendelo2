@@ -1,6 +1,8 @@
-<%= link_to product_path(product.id), class: 'product', 'data-turbo-frame': '_top' do  %> <!-- Con 'data-turbo-fram'... hacemos que se salga del frame y no haya ningun bug --> 
-    <br>
-    <%= image_tag product.photo, width: 200 if product.photo.attached? %> <!-- Con if product.photo.attached? comprobamos si tiene una foto adjunta -->
-    <h2><%= product.title %></h2>
-    <span><%= product.price %>$</span>
+<%= link_to product_path(product.id), class: 'product bg-white mb-2 rounded sm:w-[calc(33.33333%_-_.5rem)] sm:w-[calc(25%_-_.5rem)]', 'data-turbo-frame': '_top' do  %> <!-- Con 'data-turbo-fram'... hacemos que se salga del frame y no haya ningun bug --> 
+    <%= image_tag product.photo.attached? ? product.photo : 'placeholder.png', class: 'w-full h-60 object-cover' %> <!-- Con if product.photo.attached? comprobamos si tiene una foto adjunta -->
+    <div class='m-2'>
+        <span class='font-bold text-xl'><%= product.price %>$</span>
+        <h2><%= product.title %></h2>
+        <p class='text-gray-500 text-sm mt-2'><%= product.description %></p>
+    </div>
 <% end %>

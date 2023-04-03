@@ -1,5 +1,5 @@
 es:
-  app_name: 'Vendeloooooooooo'
+  app_name: 'Vendelo'
   meta_title: 'Compra y vende productos de segunda mano!'
 
   activerecord: # Para modificar los campos del formulario
@@ -42,7 +42,7 @@ es:
   shared:
     header:
       add: 'Anhadir Producto'
-      favorite: 'Mis favoritos'
+      favorites: 'Mis favoritos'
       categories: 'Categorias'
       login: 'Login'
       register: 'Registro'
