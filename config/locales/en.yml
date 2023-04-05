@@ -108,3 +108,8 @@ en:
   favorites:
     index:
       title: 'My Favorites'
+
+  user_mailer:
+    welcome:
+      subject: 'Welcome to Vendelo'
+      welcome_message: 'Hey %{username}, welcome to Vendelo!'

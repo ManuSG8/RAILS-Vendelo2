@@ -9,6 +9,7 @@ class Authentication::UsersController < ApplicationController # Declaramos antes
         @user = User.new(user_params)
 
         if @user.save
+            UserMailer.with(user: @user).welcome.deliver_later # Enviamos un email al registrarse
             session[:user_id] = @user.id # Definimos una variable de sesion. Parecese a PHP non?
             redirect_to products_path, notice: t('.created')
         else
